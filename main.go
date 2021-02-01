@@ -198,7 +198,7 @@ func (opt *Options) Search(noColor bool) error {
 		regexes = `"><a href="\/url\?q=(.*?)&amp;sa=U&amp;`
 		baseURL = "https://developers.facebook.com/tools/debug/echo/?q=https://www.google.com/search?q="
 		params = ("q=" + queryEsc + "&gws_rd=cr,ssl&client=ubuntu&ie=UTF-8&start=")
-	    opt.Header=("cookie", "datr=XWArX_algAOP_MSw42ayfmIr; wd=1408x625; dpr=1.25; sb=lGArX531ZeL9u4E1Me3SMbOF; c_user=100018709342798; xs=50%3AfZ3p52I084Jzsw%3A2%3A1596678292%3A-1%3A-1; fr=1j8ZKYa32ctGNOg20.AWWwnl9YdlGpNJ_9rPiVXRAPnNo.BfK2CU.f_.AAA.0.0.BfK2CU.AWU64zM_; spin=r.1002471208_b.trunk_t.1596678298_s.1_v.2_; act=1596678384030%2F0;")
+	    //opt.Header=("cookie", "datr=XWArX_algAOP_MSw42ayfmIr; wd=1408x625; dpr=1.25; sb=lGArX531ZeL9u4E1Me3SMbOF; c_user=100018709342798; xs=50%3AfZ3p52I084Jzsw%3A2%3A1596678292%3A-1%3A-1; fr=1j8ZKYa32ctGNOg20.AWWwnl9YdlGpNJ_9rPiVXRAPnNo.BfK2CU.f_.AAA.0.0.BfK2CU.AWU64zM_; spin=r.1002471208_b.trunk_t.1596678298_s.1_v.2_; act=1596678384030%2F0;")
 
 	case "shodan":
 		regexes = `\"><a href=\"/host/(.*?)\">`
