@@ -17,12 +17,11 @@ import (
 	"time"
 
 	"github.com/fatih/color"
-	log "github.com/projectdiscovery/gologger"
+	
 )
 
 func Err(e error) {
 	if e != nil {
-		log.Errorf("%s\n", e)
 		os.Exit(1)
 	}
 }
@@ -105,23 +104,6 @@ func main() {
 
 	engine = strings.ToLower(engine)
 
-	if !silent {
-		c := color.New(color.FgCyan, color.Bold)
-		c.Println(banner)
-		log.Labelf("Use at your own risk! Developers assume no responsibility")
-		log.Labelf("If your IP address has been blocked by search engine providers or other reason.")
-		log.Infof("Query : %s", query)
-		log.Infof("Page  : %s", strconv.Itoa(page))
-		if proxy != "" {
-			log.Infof("Proxy : %s", proxy)
-		}
-		if len(headers) > 0 {
-			for _, h := range headers {
-				log.Infof("Header: %s", h)
-			}
-		}
-		log.Infof("Engine: %s\n\n", strings.Title(engine))
-	}
 
 	stat, _ := os.Stdin.Stat()
 	if (stat.Mode() & os.ModeCharDevice) == 0 {
@@ -141,7 +123,7 @@ func main() {
 		}
 	} else {
 		if query == "" {
-			log.Fatalf("Missing required -q flag!")
+			
 			os.Exit(2)
 		}
 
