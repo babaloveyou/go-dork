@@ -22,7 +22,7 @@ import (
 
 func Err(e error) {
 	if e != nil {
-		log.Errorf("%s\n", e)
+		log.Error("%s\n", e)
 		os.Exit(1)
 	}
 }
