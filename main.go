@@ -235,7 +235,7 @@ func (opt *Options) Search(noColor bool) error {
 		}
 
 		html := opt.Get(baseURL + "?" + params + page)
-		//fmt.Println(html)
+		////fmt.Println(html)
 		result := Parser(html, regexes)
 		for i := range result {
 			url, err := url.QueryUnescape(result[i][1])
